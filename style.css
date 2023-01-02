@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+  --fc-primary: #34355b;
+  --ff-cursive: "Dancing Script", cursive;
+  --ff-dm: "DM Sans", sans-serif;
+  --ff-mont: "Montserrat", sans-serif;
+  --bg-card: rgba(228, 237, 241, 1);
+}
+
+body {
+  background: linear-gradient(
+    45deg,
+    rgba(25, 3, 97, 1) 0%,
+    rgba(187, 0, 255, 1) 100%
+  );
+  background-size: 400% 400%;
+  animation: gradient 3000ms ease infinite;
+  height: 100vh;
+}
+
+main .hide {
+  display: none;
+}
+
+main {
+  background: white;
+  width: min(42.8rem, 90%);
+  margin: 10rem auto;
+  border-radius: 5px;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+main h1 {
+  width: 26rem;
+  color: var(--fc-primary);
+  font-family: var(--ff-mont);
+  font-weight: bold;
+  font-size: 2.4rem;
+  line-height: 3rem;
+}
+
+main p {
+  color: var(--fc-primary);
+  font-family: var(--ff-dm);
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+main .screen1 {
+  width: 42.8rem;
+  padding: 4.8rem 6.4rem 6.4rem;
+}
+
+.screen1 {
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  gap: 1.4rem;
+}
+
+.screen1 p {
+  margin-bottom: 6px;
+}
+
+.screen1 img:hover {
+  animation: shake 500ms ease infinite;
+  cursor: pointer;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.screen2 {
+  display: grid;
+  gap: 1.7rem;
+  text-align: center;
+  justify-items: center;
+  padding: 4.8rem 6.4rem;
+}
+
+.screen2 h1 {
+  margin: 0 auto 14rem;
+  width: 26.5rem;
+}
+
+.screen2 button {
+  border-radius: 4px;
+  background-color: #ff9500;
+  color: white;
+  font-family: var(--ff-dm);
+  font-weight: bold;
+  padding: 1.6rem;
+  border: none;
+  cursor: pointer;
+}
+
+.screen2 .card {
+  width: 30rem;
+  height: 11rem;
+  margin: 1rem 0;
+  animation: appearing 2000ms;
+  margin: 8rem auto 0;
+  position: absolute;
+  background: var(--bg-card);
+  box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.card p {
+  font-family: var(--ff-cursive);
+  font-size: 2.4rem;
+  line-height: 3rem;
+
+}
+
+@keyframes appearing {
+  0% {
+    transform: translateX(-20px) translateY(150px) scale(0.1);
+  }
+
+  100% {
+    transform: translateX(0) translateY(0) scale(1);
+  }
+}
