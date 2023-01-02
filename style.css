@@ -64,6 +64,10 @@ main .screen1 {
   gap: 1.4rem;
 }
 
+.screen1 img {
+  margin-top: 7.5rem;
+}
+
 .screen1 p {
   margin-bottom: 6px;
 }
