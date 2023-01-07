@@ -5,12 +5,13 @@
 }
 
 :root {
-  font-size: 62.5%;
   --fc-primary: #34355b;
   --ff-cursive: "Dancing Script", cursive;
   --ff-dm: "DM Sans", sans-serif;
   --ff-mont: "Montserrat", sans-serif;
   --bg-card: rgba(228, 237, 241, 1);
+
+  font-size: 62.5%;
 }
 
 body {
@@ -21,7 +22,6 @@ body {
   );
   background-size: 400% 400%;
   animation: gradient 3000ms ease infinite;
-  height: 100vh;
 }
 
 main .hide {
@@ -29,15 +29,29 @@ main .hide {
 }
 
 main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+  padding: 0 2rem;
+}
+
+.card {
   background: white;
-  width: min(42.8rem, 90%);
-  margin: 10rem auto;
-  border-radius: 5px;
+
+  padding: 4.8rem 6.4rem 6.4rem;
+  border-radius: 0.6rem;
+  width: 100%;
+  max-width: 428px;
+
   box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
 }
 
-main h1 {
-  width: 26rem;
+.card h1 {
+  width: 100%;
+
   color: var(--fc-primary);
   font-family: var(--ff-mont);
   font-weight: bold;
@@ -45,28 +59,28 @@ main h1 {
   line-height: 3rem;
 }
 
-main p {
+.card p {
   color: var(--fc-primary);
   font-family: var(--ff-dm);
   font-size: 1.5rem;
   line-height: 2rem;
 }
 
-main .screen1 {
-  width: 42.8rem;
-  padding: 4.8rem 6.4rem 6.4rem;
+.card .screen1 {
+  width: 100%;
 }
 
 .screen1 {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   justify-content: center;
+  align-items: center;
   gap: 1.4rem;
+
+  width: 100%;
 }
 
-.screen1 img {
-  margin-top: 7.5rem;
-}
 
 .screen1 p {
   margin-bottom: 6px;
@@ -126,16 +140,18 @@ main .screen1 {
 }
 
 .screen2 {
-  display: grid;
+  width: 100%;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
   gap: 1.7rem;
-  text-align: center;
-  justify-items: center;
-  padding: 4.8rem 6.4rem;
 }
 
 .screen2 h1 {
-  margin: 0 auto 14rem;
-  width: 26.5rem;
+  margin-bottom: 14rem;
+  text-align: center;
 }
 
 .screen2 button {
@@ -147,28 +163,32 @@ main .screen1 {
   padding: 1.6rem;
   border: none;
   cursor: pointer;
+  margin: 0 auto
 }
 
-.screen2 .card {
-  width: 30rem;
+#message-card {
+  width: 100%;
   height: 11rem;
-  margin: 1rem 0;
-  animation: appearing 2000ms;
-  margin: 8rem auto 0;
-  position: absolute;
-  background: var(--bg-card);
-  box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.5);
+
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+
+  box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.5);
+  animation: appearing 2000ms;
+  background: var(--bg-card);
+
+  text-align: center;
+
+  margin: 8rem 0 0;
   padding: 1rem;
 }
 
-.card p {
+#message-card p {
   font-family: var(--ff-cursive);
   font-size: 2.4rem;
   line-height: 3rem;
-
 }
 
 @keyframes appearing {
@@ -178,5 +198,11 @@ main .screen1 {
 
   100% {
     transform: translateX(0) translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 385px) {
+  .card {
+    padding: 3.8rem 5.4rem 5.4rem;
   }
 }

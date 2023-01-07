@@ -12,32 +12,35 @@
     rel="stylesheet">
   <title>Biscoito da sorte</title>
   <link rel="shortcut icon" href="img\favicon.svg" type="image/x-icon">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
   <main>
 
-    <!-- screen 1 -->
-    <div class="screen1">
-      <h1>Qual é a sua sorte de hoje?</h1>
-      <p>Abra o biscoito e descubra!</p>
-      <img id="cookie" src="img\closedcookie.png" alt="Imagem de um biscoita da sorte fechado">
-    </div>
-
-    <!-- screen 2 -->
-    <div class="screen2 hide">
-      <h1>Aqui está a sua sorte de hoje:</h1>
-      <div class="card">
-        <p id="mensagem"></p>
+    <div class="card">
+      <!-- screen 1 -->
+      <div class="screen1">
+        <h1>Qual é a sua sorte de hoje?</h1>
+        <p>Abra o biscoito e descubra!</p>
+        <img id="cookie" src="img\closedcookie.png" alt="Imagem de um biscoita da sorte fechado">
       </div>
-      <img src="img\opened-cookie.png" alt="Imagem de um biscoito da sorte aberto">
 
-      <button class="reset">Abrir outro biscoito</button>
+      <!-- screen 2 -->
+      <div class="screen2 hide">
+        <h1>Aqui está a sua sorte de hoje:</h1>
+        <div id="message-card">
+          <p id="mensagem"></p>
+        </div>
+        <img src="img\opened-cookie.png" alt="Imagem de um biscoito da sorte aberto">
+
+        <button class="reset">Abrir outro biscoito</button>
+      </div>
     </div>
 
   </main>
 
-  <script src="script.js"></script>
+
 </body>
 
 </html>
