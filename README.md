@@ -1,7 +1,7 @@
 
 #  Biscoito da Sorte
 
-Esse projeto foi realizado em um desafio proposto no curso Explorer da [RocketSeat](https://app.rocketseat.com.br/). Ele consiste na criação de uma aplicação que simula um biscoito da sorte para fixar os conceitos de JavaScript vistos em aula. Esse foi meu primeiro projeto usando JS no curso!
+Esse projeto foi um desafio proposto no curso Explorer da [RocketSeat](https://app.rocketseat.com.br/). Ele consiste na criação de uma aplicação que simula um biscoito da sorte para fixar os conceitos de JavaScript vistos em aula. Esse foi meu primeiro projeto usando JS no curso!
 
 
 ## 🔗 Links
