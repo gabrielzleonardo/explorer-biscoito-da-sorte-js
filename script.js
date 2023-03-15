@@ -22,9 +22,6 @@ const handleClick = () => {
   const randomNumber = Math.round(Math.random() * list.length);
   message.innerHTML = list[randomNumber];
 };
-const handleReset = () => {
-  toggleScreen();
-};
 
 const toggleScreen = () => {
   screenOne.classList.toggle("hide");
